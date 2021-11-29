@@ -9,5 +9,5 @@ fab.style.bottom = '16px';
 fab.style.backgroundColor = '#6FBC6D';
 fab.style.width = '100px';
 fab.style.height = '100px';
-
+fab.style.borderRadius = '50px';
 
