@@ -5,7 +5,7 @@ fab.style.bottom = '16px';
 fab.style.backgroundColor = '#6FBC6D';
 fab.style.height = '100px';
 fab.style.width = '100px;
-fab.style.borderRadius = '50px';
+fab.style.border-radius = '50px';
 
 function createAlert() {
 	alert("testing");
