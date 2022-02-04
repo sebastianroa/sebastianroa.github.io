@@ -1,2 +1,2 @@
 # sebastianroa.github.io
-View stuff
+Demo'ing my recent project
