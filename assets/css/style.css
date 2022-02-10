@@ -1560,6 +1560,42 @@ section {
 #footer .credits a {
   transition: 0.3s;
 }
+
+#discordBox {
+  background: rgba(84, 84, 212, 0.1);
+  border-radius: 16px;
+  margin: 0px 32px;
+  flex-direction: 'column';
+  text-align: 'center';
+  padding: 80px 32px;
+  justify-content: center;
+
+}
+#discordBtn {
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  
+  position: static;
+  width: 140px;
+  height: 56px;
+  left: 122px;
+  top: 256px;
+  
+  /* Primary/600 */
+  
+  background: #5454D4;
+  border-radius: 8px;
+  border-color: #5454D4;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin:0 auto;
+  display:block;
+}
 @media (max-width: 768px) {
   #footer .footer-bottom {
     padding-top: 20px;
