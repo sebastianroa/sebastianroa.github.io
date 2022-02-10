@@ -1596,6 +1596,18 @@ section {
   margin:0 auto;
   display:block;
 }
+
+#socialTitle {
+
+  color: white;
+  font-size: 200%;
+}
+
+#socialContainer {
+  background-color: #5454D4;
+  padding: 2.5%;
+  border-radius: 25px;
+}
 @media (max-width: 768px) {
   #footer .footer-bottom {
     padding-top: 20px;
