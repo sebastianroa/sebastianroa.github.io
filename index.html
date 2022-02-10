@@ -31,6 +31,23 @@
 </head>
 
 <body>
+  <script>
+    let counter = 0;
+    let selectedImg = '';
+    var imgList = [
+                   'nft_chip.png', 
+                   'smart_contract.png', 'nft_tag.png',
+                   'blockchain.png', 'rocket.png'
+                  ];
+    setInterval(function(){ 
+      if(counter == imgList.length) {
+        counter = 0;
+      }
+      selectedImg = imgList[counter];
+      document.getElementById("introImage").src="assets/img/"+selectedImg;
+      counter++
+    }, 3000); 
+  </script>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
@@ -45,7 +62,7 @@
         <ul>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="https://stratton-nodes.gitbook.io/main/">Litepaper</a></li>
-          <li><a class="nav-link   scrollto" href="#">Tokenomics</a></li>
+          <li><a class="nav-link   scrollto" href="#tokenomics">Tokenomics</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#footer">Socials</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">NFTS</a></li>
@@ -71,7 +88,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="assets/img/rocket.png" class="img-fluid animated" alt="" id="introImage">
         </div>
       </div>
     </div>
@@ -126,74 +143,102 @@
         </div>
 
         <div class="row content">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
+            <p style="text-align: center;">
+              We are a team with a focus in mind. We are brought together in the pursuit of building up and coming technologies while being degen at the same time. Meet Stratton Nodes. 
+              Our goal is to introduce a protocol that can generate passive income for its holders transparently and sustainably. 
+            </p>
+            <hr>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              A big problem we have found in the space is a lack of utility for a recently launched token. 
+              Many think APY wars and transactions taxes are the way to go. Unfortunately, these short-term bandages do not promote long-term success. To tackle this issue, we decided to use your node holdings as an opportunity for you to enter into a bimonthly NFT giveaway. This, in return, 
+              will continuously generate excitement in our token while providing an entertainment utility for the overall protocol. 
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Our members are doxxed to the Obsidian Council</li>
+              <li><i class="ri-check-double-line"></i> Upcoming KYC and Code Audit</li>
+              <li><i class="ri-check-double-line"></i> Over 50 years of combined marketing, operational, and software development experience</li>
             </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
       </div>
     </section><!-- End About Us Section -->
 
+    <!-- ======= Tokenomics Section ======= -->
+    <section id="tokenomics" class="services section-bg" style="background-color: #5454D4;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="color: white">Tokenomics</h2>
+          <p style="color: white">How is the treasury built</p>
+        </div>
+        <div class="row">
+          <!--Node Types-->
+          <div class="col-md-3">
+            <strong><p style="text-align: center; color: white; font-size: 2em;">2</p></strong>
+            <p style="text-align: center; color: white">Node Types</p>
+            <hr style="background-color: white; height: 2px">
+          </div>
+          <!--Treasury-->
+          <div class="col-md-3">
+            <strong><p style="text-align: center; color: white; font-size: 2em;">60%</p></strong>
+            <p style="text-align: center; color: white">Treasury</p>
+            <hr style="background-color: white; height: 2px">
+          </div>
+          <!--Tax-->
+          <div class="col-md-3">
+            <strong><p style="text-align: center; color: white; font-size: 2em;">40%</p></strong>
+            <p style="text-align: center; color: white">Tax</p>
+            <hr style="background-color: white; height: 2px">
+          </div>
+          <!--Etc-->
+          <div class="col-md-3">
+            <strong><p style="text-align: center; color: white; font-size: 2em;">2M</p></strong>
+            <p style="text-align: center; color: white">ETC</p>
+            <hr style="background-color: white; height: 2px">
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Node Types</h2>
+          <p>To keep things simple, we have offer two types of nodes.</p>
         </div>
 
         <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
+          <div class="col-xl-6 col-md-6 d-flex  mt-6 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box" style="margin: auto;">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a>Pink Slip Node</a></h4>
+              <ul>
+                <li><i class="ri-check-double-line"></i>  Standard Node</li>
+                <li><i class="ri-check-double-line"></i>  200 Day ROI</li>
+                <li><i class="ri-check-double-line"></i>  Qualifies for one NFT giveaway</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mt-6 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box" style="margin: auto;">
+              <div class="icon"><i class="bx bx-star"></i></div>
+              <h4><a>Blue Chip Node</a></h4>
+              <ul>
+                <li><i class="ri-check-double-line"></i>  Exclusive Node</li>
+                <li><i class="ri-check-double-line"></i>  100 Day ROI</li>
+                <li><i class="ri-check-double-line"></i>  Qualifies for every single NFT giveaway</li>
+              </ul>
             </div>
           </div>
 
         </div>
-
       </div>
     </section><!-- End Services Section -->
 
@@ -203,7 +248,7 @@
 
         <div class="section-title">
           <h2>Previous NFT Giveaways</h2>
-          <p>NFTs won in giveaways by our node holders</p>
+          <p>NFTs won in giveaways by our node holders.</p>
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -359,29 +404,54 @@
               <div class="member-info">
                 <h4>Roaring30s</h4>
                 <span>Front-End Developer</span>
-                <p>8 years of experience in web development. 6 years of operations management experience for the US government and PepsiCo. </p>
+                <p>
+                  8 years of experience in web development. 6 years of operations management experience for the US government and PepsiCo.
+                  Current member of the Obsidian Council.
+                </p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Fuji.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Fuji</h4>
-                <span>Front-End Developer</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <h4>Steven</h4>
+                <span>Full Stack Developer</span>
+                <p>Experience over the last three years leading an engineering team in the fiat Fintech space, and working in startups across multiple geographies prior.</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Wario.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Wario</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <span>Tech and Ops</span>
+                <p>Crypto enthusiast with a background in IT and Technology across various sectors and industries.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="assets/img/team/code_ninja.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Code Ninja</h4>
+                <span>Backend Developer</span>
+                <p>A battle-tested software veteran, Code Ninja boasts over 20 years of software development experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="assets/img/team/dom.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Dom</h4>
+                <span>Backend Developer</span>
+                <p>Launched successful projects before joining as a Solidity developer & blockchain specialist.</p>
               </div>
             </div>
           </div>
@@ -397,59 +467,67 @@
 
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="faq-list" style="padding: 2px">
+              <ul>
+                <li data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                    <p>
+                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </p>
+                  </div>
+                </li>
 
-        <div class="faq-list">
-          <ul>
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                  </div>
+                </li>
 
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    </p>
+                  </div>
+                </li>
 
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                </p>
-              </div>
-            </li>
+                <li data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                    </p>
+                  </div>
+                </li>
 
-            <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                </p>
-              </div>
-            </li>
+                <li data-aos="fade-up" data-aos-delay="500">
+                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                    </p>
+                  </div>
+                </li>
 
-            <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                </p>
-              </div>
-            </li>
-
-          </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div id="discordBox">
+              <strong><p style="font-size: 2em; text-align: center;">Don't see the answer you need?</p></strong>
+              <p style="text-align: center;">Drop a question in our discord and we will get back to you ASAP.</p>
+              <a href="https://discord.gg/xKCtpzrk"><button id="discordBtn" style="text-align: center;"><i class="bi bi-discord" style="color:white; font-size: 2em;"></i></button></a>
+            </div>
+          </div>
         </div>
-
       </div>
     </section><!-- End Frequently Asked Questions Section -->
   </main><!-- End #main -->
@@ -467,6 +545,8 @@
               <a href="https://twitter.com/StrattonNodes" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="https://discord.gg/xKCtpzrk" class="discord"><i class="bx bxl-discord"></i></a>
               <a href="#" class="medium"><i class="bx bxl-medium"></i></a> 
+              <a href="https://t.me/strattonnodes" class="telegram"><i class="bx bxl-telegram"></i></a>
+              
             </div>
           </div>
           <div class="col-3"></div>
